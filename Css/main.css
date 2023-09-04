@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+body{
+    top: 0;
+    left: 0;
+    margin: 0px 0px;
+    background-color: #ffffff;
+    width: 1920px;
+}
+#pass_1{
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+#header.show{
+  margin-top: -50px;
+}
+#header.show #head_1{
+  opacity: 0;
+  transform: translateY(-50px);
+}
+#head_1{
+    background-color: #7ec0bb;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+#head_2{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+#menu{
+    position: absolute;
+    display: inline-block;
+    margin: 50px 0 0 20px ;
+}
+#menu li{
+    display: inline-block;
+    text-decoration: none;
+    padding-right: 30px;
+}
+#menu li a{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 1.2px;
+    transition: 1.5s;
+}
+
+#menu li a:hover{
+  color: #feb528;
+}
+#dog:hover .dog-more {
+   opacity: 1;
+}
+
+.dog-more li a{
+  text-decoration: none;
+  display: block;
+  line-height: 25px;
+  font-family: 'Exo 2', sans-serif;
+  padding: 10px 0 10px 0;
+  margin-left: -20px;
+}
+.dog-more{
+  margin: 10px 0 0 0 ;
+  width: 180px;
+  background-color: rgba(225, 245, 247, 0.8);
+  position: absolute;
+  opacity: 0;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: 1.5s;
+}
+/* -----------------search------ */
+
+#head_2 #field-container{
+    position: absolute;
+    display: inline-block;
+    margin: 35px 0 0 1000px;
+}
+  #field-container {
+    position: relative;
+    padding: 0;
+    border: 0;
+    width: 220px;
+    height: 30px;
+    border-radius: 15px;
+  }
+  
+  .icons-container {
+    position: absolute;
+    top: 5px;
+    right: -25px;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+  }
+  
+  .icon-close {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 75%;
+    height: 75%;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateX(-200%);
+    border-radius: 50%;
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+  }
+  .icon-close:before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: 2px solid transparent;
+    border-top-color: #feb528;
+    border-left-color: #feb528;
+    border-bottom-color: #feb528;
+    transition: opacity 0.2s ease;
+  }
+  .icon-close .x-up {
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+  .icon-close .x-up:before {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 3px;
+    width: 50%;
+    height: 2px;
+    background-color: #feb528;
+    transform: rotate(45deg);
+  }
+  .icon-close .x-up:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    width: 50%;
+    height: 2px;
+    background-color: #feb528;
+    transform: rotate(-45deg);
+  }
+  .icon-close .x-down {
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+  .icon-close .x-down:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 50%;
+    height: 2px;
+    background-color: #feb528;
+    transform: rotate(-45deg);
+  }
+  .icon-close .x-down:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 1px;
+    width: 50%;
+    height: 2px;
+    background-color: #feb528;
+    transform: rotate(45deg);
+  }
+  .is-type .icon-close:before {
+    opacity: 1;
+    -webkit-animation: spin 0.85s infinite;
+            animation: spin 0.85s infinite;
+  }
+  .is-type .icon-close .x-up:before, .is-type .icon-close .x-up:after {
+    -webkit-animation: color-1 0.85s infinite;
+            animation: color-1 0.85s infinite;
+  }
+  .is-type .icon-close .x-up:after {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .is-type .icon-close .x-down:before, .is-type .icon-close .x-down:after {
+    -webkit-animation: color-1 0.85s infinite;
+            animation: color-1 0.85s infinite;
+  }
+  .is-type .icon-close .x-down:before {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .is-type .icon-close .x-down:after {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+  }
+  
+  .icon-search {
+    position: relative;
+    top: 5px;
+    left: 8px;
+    width: 50%;
+    height: 50%;
+    opacity: 1;
+    border-radius: 50%;
+    border: 2px solid #feb528;
+    transition: opacity 0.25s ease, transform 0.43s cubic-bezier(0.694, 0.048, 0.335, 1);
+  }
+  .icon-search:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: -2px;
+    width: 2px;
+    border-radius: 3px;
+    transform: rotate(-42deg);
+    height: 10px;
+    background-color: #feb528;
+  }
+  
+  .field {
+    border-radius: 15px;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background: rgb(247, 244, 244);
+    transition: all 0.4s ease;
+  }
+  .field:focus {
+    outline: none;
+    box-shadow: 0px 9px 20px rgba(75, 72, 72, 0.3);
+  }
+  .field:focus + .icons-container .icon-close {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .field:focus + .icons-container .icon-search {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+/* ------------------------ */
+  #pass_2{
+    margin-top: 150px;
+  }
+  #about_me{
+     height: 300px;
+     width: 530px;
+     position: absolute;
+     margin: -700px 0 0 120px; 
+  }
+  #about_me p{
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+  }
+  /* ------------------------ */
+  #pass_3{
+    margin: 0px 0 0 100px;
+  }
+  #outstanding{
+    display: flex;
+    margin: 0 0 50px 650px;
+  }
+  #outstanding img{
+    height: 25px;
+    width: 25px;
+    margin: 52px 20px 0 20px;
+    opacity: 0.5;
+  }
+  #outstanding p{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+
+  #img_outstding{
+    margin: -20px 0 0 55px;
+    display: flex;
+  }
+  .information h1{
+    font-size: 45px; 
+    font-weight: 600; 
+    font-family: 'Exo 2', sans-serif;
+    padding: 50px 0 0 35px;
+  }
+  .information p{
+    width: 320px;
+   letter-spacing: 0.5px;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 0 0 0 35px;
+   line-height: 25px;
+  }
+  .img_infor{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+   transition: all 2s ease;
+  }
+  .img_infor img:hover{
+    transition: 1.5s;
+    transform: scale(1.1,1.1);
+  }
+  .btn {
+    border: none;
+    height: 35px;
+    width: 120px;
+    margin-left: 35px;
+    position: absolute;
+    bottom: 35px;
+  }
+  .btn:hover{
+    transition: 0.75s;
+    background-color: #313131;
+    color: #ffffff;
+  }
+  .btn a{
+    font-size: 17px;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+
+  /* ------- 4 ----- */
+  #pass_4{
+
+  }
+  #product{
+    display: flex;
+    margin: 20px 0 50px 738px;
+  }
+  #product img{
+    height: 25px;
+    width: 25px;
+    margin: 52px 20px 0 20px;
+    opacity: 0.5;
+  }
+  #product p{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+  #product-class{
+    display: flex;
+    margin-left: 50px;
+  }
+  .product-img img{
+    height: 400px;
+    width: 400px;
+    margin: 0 63px 50px 0 ;
+  }
+  .product-img p{
+    font-size: 17px;
+    margin-left: -45px;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
+  }
+  .btn-products{
+    background-color: white;
+    height: 50px;
+    width: 400px;
+    opacity: 0;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: 'Exo 2', sans-serif;
+  }
+  .btn-products:hover {
+    opacity: 0.8;
+    background-color: #313131;
+    color: white;
+    border: none;
+    transition: 0.4s;
+  }
+  .view-hover{
+    position: absolute;
+    margin: -80px 0 0 95px;
+    opacity: 0;
+    transition: 0.5s;
+    font-family: 'Exo 2', sans-serif;
+    padding:0 70px 100px 70px ;
+    font-weight: 600;
+  }
+  .view-hover:hover{
+    color: #feb528;
+  }
+  .double_hover{
+    margin: 2px;
+  }
+  .double_hover:hover a{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  .double_hover:hover button{
+    opacity: 1;
+  }
+
+  #pass_4 #btn_shop_all{
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 120px;
+    letter-spacing: 0.5px;
+    font-family: 'Exo 2', sans-serif;
+    margin: 50px 0 0 900px;
+    transition: 0.6s;
+  }
+  #pass_4 #btn_shop_all:hover{
+    background-color: #313131;
+    color: white;
+  }
+
+   /* ------- 5 ----- */
+   #pass_5{
+     height: 600px;
+   }
+   #brands{
+    margin: 70px 0 0 155px;
+    height: 440px;
+    width: 1600px;
+    background-color: #f5f4f4;
+   }
+   #brands p{
+    color: #feb528;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 70px;
+    letter-spacing: 1px;
+   }
+   #img_brands{
+    margin-top: 100px;
+    margin-left: 5px;
+    display: flex;
+   }
+   #img_brands img{
+    margin-left: 20px;
+    width:  283px;
+    height: 125px;
+   }
+
+/* ------- 6 ----- */
+   #pass_6{
+
+   }
+   #petcage{
+     display: flex;
+     margin: 20px 0 50px 801px;
+   }
+   #petcage img{
+     height: 25px;
+     width: 25px;
+     margin: 52px 20px 0 20px;
+     opacity: 0.5;
+   }
+   #petcage p{
+     font-family: 'Exo 2', sans-serif;
+     font-size: 40px;
+     font-weight: 600;
+     letter-spacing: 1.5px;
+   }
+   #petcage-class{
+     display: flex;
+     margin-left: 155px;
+   }
+   .petcage-img img{
+     height: 350px;
+     width: 350px;
+     margin: 0 68px 50px 0 ;
+   }
+   .petcage-img p{
+     font-size: 17px;
+     margin-left: -30px;
+     text-align: center;
+     font-family: 'Exo 2', sans-serif;
+     font-weight: 100;
+   }
+   .btn-petcage{
+     background-color: white;
+     height: 50px;
+     width: 400px;
+     opacity: 0;
+     font-size: 15px;
+     letter-spacing: 0.5px;
+     font-family: 'Exo 2', sans-serif;
+   }
+   .btn-petcage:hover {
+     opacity: 0.8;
+     background-color: #313131;
+     color: white;
+     border: none;
+     transition: 0.4s;
+   }
+    .viewpet-hover{
+     position: absolute;
+     margin: -80px 0 0 80px;
+     opacity: 0;
+     transition: 0.5s;
+     font-family: 'Exo 2', sans-serif;
+     padding:0 70px 100px 70px ;
+     font-weight: 600;
+   }
+   .viewpet-hover:hover{
+     color: #feb528;
+   }
+    .double_hover{
+     margin: 2px;
+   }
+    .double_hover:hover a{
+     opacity: 1;
+     transform: translateY(-30px);
+   }
+    .double_hover:hover button{
+     opacity: 1;
+   }
+ 
+   #btn_shop_all{
+     background-color: white;
+     border: 1px solid black;
+     height: 40px;
+     width: 120px;
+     letter-spacing: 0.5px;
+     font-family: 'Exo 2', sans-serif;
+     margin: 50px 0 0 900px;
+     transition: 0.6s;
+   }
+   #btn_shop_all:hover{
+     background-color: #313131;
+     color: white;
+   }
+
+   /* ------- 7 ----- */
+   #pass_7{
+
+   }
+   #pass_7_banner{
+    margin: 70px 0 0 158px;
+   }
+   #pass_7_text{
+    position: absolute;
+    margin: 120px 0 0 290px;
+   }
+   #pass_7_text p{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+   }
+   #btn_pass7{
+    margin-top: 50px;
+    height: 40px;
+    width: 120px;
+    background-color: #feb528;
+    transition: 0.5s;
+    font-family: 'Exo 2', sans-serif;
+   }
+   #btn_pass7:hover{
+    color: white;
+    background-color: #313131;
+   }
+
+ /* ------- 8 ----- */
+   #pass_8_last{
+    /* background-color: #f5f4f4; */
+    height: 190px;
+    width: 1600px;
+    margin-top: 70px;
+    margin-left: 180px;
+    display: flex;
+   }
+   #pass_8_last p{
+    font-family: 'Exo 2', sans-serif;
+    line-height: 25px;
+    width: 300px;
+   }
+   .pass_8_text{
+    margin-right: 140px;
+    margin-top: -20px;
+   }
+   .pass_8_text i{
+    font-size: 22px;
+    padding-right: 20px;
+   }
+
+    /* ------- 9 ----- */
+    #pass_9_text{
+      margin-top: 70px;
+    }
+    #pass_9_text p{
+      text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    }
+    #pass_9_text input{
+      height: 38px;
+      width: 500px;
+      margin: 20px 0 0 700px;
+      border: solid 2.5px #7ec0bb;
+    }
+    #pass_9_text button{
+      height: 40px;
+      width: 515px;
+      margin: 10px 0 0 700px;
+      border: none;
+      background-color: #feb528;
+      color: black;
+      font-family: 'Exo 2', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      transition: 0.5s;
+    }
+    #pass_9_text button:hover{
+      background-color: #313131;
+      color: white;
+    }
+
+    /* ------- 10 ----- */
+    .chat{
+      width: 70px;
+      height: 70px;
+      bottom: 0;
+      position: fixed;
+      background-color: #7ec0bb;
+      margin-left: 1800px;
+      margin-bottom: 10px;
+    }
+    .chat i{
+      font-size: 35px;
+      color: white;
+      padding: 16px 0 0 16px;
+    }
+
+    #chat_display.show{
+      margin-left: 1540px;
+      width: 350px;
+      height: 500px;
+      margin-top: -525px;
+      bottom: 0;
+      margin-bottom: 10px;
+      position: fixed;
+      background-color: #f7f3f3;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, 
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    #chat_display{
+      margin-left: 1540px;
+      width: 350px;
+      height: 500px;
+      margin-top: -525px;
+      bottom: 0;
+      position: fixed;
+      background-color: #f7f3f3;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, 
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #text_chat input{
+      border: none;
+      height: 60px;
+      width: 340px;
+      bottom: 0;
+      margin-top: 360px;
+      font-family: 'Exo 2', sans-serif;
+    }
+    #text_chat #send{
+       margin: 382px 0 0 300px;
+       z-index: 5;
+       font-size: 22px;
+       position: absolute;
+       transition: 0.5s;
+    }
+    #send:hover{
+      color: #feb528;
+      font-size: 25px;
+    }
+    #title_chat{
+      height: 80px;
+      width: 350px;
+      background-color: #313131;
+    }
+    #title_chat p{
+      font-family: 'Exo 2', sans-serif;
+      color: white;
+      margin: 15px 0 0 20px;
+      position: absolute;
+    }
